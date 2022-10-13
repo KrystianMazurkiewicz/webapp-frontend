@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Front Page</title>
+  <!-- <link rel="stylesheet" href="css/all.css"> -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <script defer type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script defer src="api/candleChart.js"></script>
+</head>
+<body>
+  <aside>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="" class="button">
+              <i class="fa-solid fa-house"></i>
+              <!-- <i class="fa-solid fa-house" style="color:white;text-shadow: -2px 0 rgb(120, 120, 120), 0 2px rgb(120, 120, 120), 2px 0 rgb(120, 120, 120), 0 -2px rgb(120, 120, 120);"></i> -->
+            </a>
+            Home
+          </li>
+          <li>
+            <a href="" class="button">
+              <i class="fa-solid fa-briefcase"></i>
+            </a>
+            Portfolio
+          </li>
+          <li>
+            <a href="" class="button">
+              <!-- <i class="fa-brands fa-shopify"></i> -->
+              <i class="fa-solid fa-chart-simple"></i>
+            </a>
+            Marked
+          </li>
+          <li>
+            <a href="" class="button">
+              <!-- <i class="fa-solid fa-tag"></i> -->
+              <i class="fa-solid fa-handshake"></i>
+            </a>
+            Transactions
+          </li>
+          <li>
+            <a href="" class="button">
+              <!-- <i class="fa-regular fa-user"></i> -->
+              <i class="fa-solid fa-user-large"></i>
+            </a>
+            Profile
+          </li>
+          <li>
+            <a href="" class="button">
+              <i class="fa-solid fa-id-badge"></i>
+            </a>
+            Account
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </aside>
+
+  <main>
+    <div class="dashboard-container container">
+      <div>
+        <h1>Dashboard</h1>
+        <p class="grey-text">Payments updates</p>
+      </div>
+      <div class="search-bar-container">
+        <i class="fa-solid fa-magnifying-glass" style="font-size: 1.5rem;"></i>
+        <input type="text" class="search-bar">
+      </div>
+    </div>
+    <div class="container-your-expenses-data container">
+      
+    </div>
+    <div class="graph-container container">
+      <div id="chart_div" style="width: 100%; height: 100%;"></div>
+    </div>
+    <div class="profile-and-recent-activity-container container">
+      <a href="" class="your-profile">
+        <!-- lag en ::after for acitivty -->
+        <img src="https://www.w3schools.com/howto/img_avatar.png" class="avatar" alt="Your profile picture">
+        <p class="your-name">Krystian Mazurkiewicz</p>
+        <p class="your-title">Product Designer</p>
+      </a>
+      <nav>
+        <ul>
+          <!-- the buttons are too big, a tags should also be buttons -->
+          <li>
+            <a href="" class="button">
+              <i class="fa-solid fa-briefcase"></i>
+
+            </a>
+          </li>
+          <li>
+            <a href="" class="button">
+              <i class="fa-solid fa-user-large"></i>
+
+            </a>
+          </li>
+          <li>
+            <a href="" class="button">
+              <i class="fa-solid fa-id-badge"></i>
+
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="recent-activites-container">
+        <h2>Recent Activities</h2>
+        <div class="current-date">02 Mar 2021</div>
+        
+        <div class="friends-profile">
+          <img src="https://www.w3schools.com/howto/img_avatar.png" alt="" class="avatar small-avatar">
+          <div>
+            <p class="friend-name">Fredrik Skatvedt</p>
+            <p class="friend-position">Narkoman CEO</p>
+            <p class="friend-last-active">30 mins</p>
+          </div>
+        </div>
+        <div class="friends-profile">
+          <img src="https://www.w3schools.com/howto/img_avatar.png" alt="" class="avatar small-avatar">
+          <div>
+            <p class="friend-name">Fredrik Skatvedt</p>
+            <p class="friend-position">Narkoman CEO</p>
+            <p class="friend-last-active">30 mins</p>
+          </div>
+        </div>
+        <div class="friends-profile">
+          <img src="https://www.w3schools.com/howto/img_avatar.png" alt="" class="avatar small-avatar">
+          <div>
+            <p class="friend-name">Fredrik Skatvedt</p>
+            <p class="friend-position">Narkoman CEO</p>
+            <p class="friend-last-active">30 mins</p>
+          </div>
+        </div>
+        <div class="friends-profile">
+          <img src="https://www.w3schools.com/howto/img_avatar.png" alt="" class="avatar small-avatar">
+          <div>
+            <p class="friend-name">Fredrik Skatvedt</p>
+            <p class="friend-position">Narkoman CEO</p>
+            <p class="friend-last-active">30 mins</p>
+          </div>
+        </div>
+        <div class="friends-profile">
+          <img src="https://www.w3schools.com/howto/img_avatar.png" alt="" class="avatar small-avatar">
+          <div>
+            <p class="friend-name">Fredrik Skatvedt</p>
+            <p class="friend-position">Narkoman CEO</p>
+            <p class="friend-last-active">30 mins</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="latest-message container">
+      <p class="message-title">
+        Invest in TSLA, NOW!!!
+      </p> 
+      <p class="message-by">
+        <span>By: </span>youruncle69
+      </p>
+
+      <p class="message-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum dignissimos voluptates assumenda odio repellendus eos totam illo magni, libero maiores!</p>
+
+      <div class="message-date">
+        02. Feb 2023
+      </div>
+    </div>
+  </main>
+</body>
+</html>

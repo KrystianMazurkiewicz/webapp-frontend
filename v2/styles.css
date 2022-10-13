@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100&display=swap');
+
+
+*:not(i), *:not(i)::before, *:not(i)::after {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  /* border: 1px solid; */
+  /* color: rgb(68, 48, 179); */
+
+}
+
+:root {
+  --conic-gradient: rgb(68, 48, 179);
+  --turns: .4turn;
+  --width: 10%;
+}
+
+body {
+  display: flex;
+  background-color: rgb(68, 48, 179);
+  background-color: rgb(252, 195, 143);
+  background-color: rgb(253, 199, 200);
+  background-color: rgb(230, 234, 247);
+  background-color: rgb(243, 246, 254);
+  background-color: rgb(213, 219, 229);
+}
+
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+aside {
+  width: var(--width);
+}
+
+header {
+  padding: 20px;
+}
+
+h1 {
+  color: rgb(68, 48, 179);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+li > a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+input {
+  border: none;
+}
+
+main {
+  width: calc(100% - var(--width));
+  height: 100vh;
+  display: grid;
+  grid-template-areas: 
+    'dashboard profile'
+    'stats profile'
+    'graph profile'
+    'graph latest-msg';
+  grid-gap: 30px;
+  padding: 50px;
+  grid-template-rows: 10% 10% auto 24%;
+  grid-template-columns: auto 20%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container:not(:nth-child(1)) {
+  border-radius: 20px;
+  background-color: #E6EAF7;
+  box-shadow: rgba(212, 212, 212, 0.56) 0px 0px 10px 2px;
+  padding: 40px;
+}
+
+.search-bar-container {
+  /* background-color: red; */
+  background-color: #E6EAF7;
+  width: 50%;
+  padding: 10px 40px;
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+}
+
+/* when search bar is focused the container looks ugly */
+.search-bar {
+  margin-left: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.grey-text {
+  color: rgb(67, 67, 67);
+  font-size: 1.1rem;
+}
+
+.dark-grey-text {
+  color: rgb(45, 45, 45);
+  font-weight: 600;
+  font-size: .9rem;
+}
+
+.medium-text {
+  font-size: 2rem;
+  color: rgb(21, 21, 21);
+  font-weight: 600;
+  margin: 10px 0px;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard-container {
+  grid-area: dashboard;
+}
+
+.container-your-expenses-data {
+  grid-area: stats;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.graph-container {
+  grid-area: graph;
+}
+
+.profile-and-recent-activity-container {
+  grid-area: profile;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.your-profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.your-name {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 16px 0px 0px;
+}
+
+.your-title {
+  color:rgb(97, 97, 97);
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.profile-and-recent-activity-container > nav {
+  margin: 20px 0px 60px 0px;
+}
+
+.profile-and-recent-activity-container > nav > ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recent-activites-container {
+  width: 100%;
+}
+
+h2 {
+  
+}
+
+.current-date {
+  font-size: .9rem;
+  color: rgb(98, 98, 98);
+}
+
+.small-avatar {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.friends-profile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.friend-name {
+  font-weight: 600;
+  font-size: .9rem;
+}
+
+.friend-position {
+  color:rgb(98, 98, 98);
+  font-size: .9rem;
+  margin-top: -4px;
+  /* margin-bottom: 2px; */
+}
+
+.friend-last-active {
+  color: rgb(67, 67, 67);
+  color:rgb(98, 98, 98);
+  font-size: .9rem;
+}
+
+
+
+
+.circle-container {
+  position: relative;
+  margin-left: 30px;
+}
+
+.circle {
+  border-radius: 999px;
+  background: conic-gradient(
+    var(--conic-gradient) var(--turns),
+    transparent var(--turns)
+  );
+  height: 120px;
+  width: 120px;
+}
+
+.circle::before {
+  content: '';
+  border-radius: 999px;
+  background-color: white;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: black;
+}
+
+.total-expenses-circle {
+  --conic-gradient: rgb(252, 195, 143);
+  --turns: .3turn;
+}
+
+.total-bonus-circle {
+  --conic-gradient: rgb(253, 199, 200);
+  --turns: .7turn;
+}
+
+.order-container {
+  position: relative;
+  display: block;
+  padding: 30px 0px 0px 40px;
+}
+
+.order-container > h2 {
+  font-size: 1.1rem;
+  color: black;
+}
+
+.button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+  margin: 20px;
+  box-shadow: rgba(123, 123, 123, 0.56) 0px 5px 20px 2px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  background-color: white;
+}
+
+
+
+/* .button::before {
+  content: '...';
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: rotate(90deg) translate(-116%, 2%);
+  font-size: 2rem;
+} */
+
+.latest-message {
+  grid-area: latest-msg;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.message-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: black;
+}
+
+.message-by,
+.message-by span {
+  font-size: .9rem;
+  color: rgb(98, 98, 98);
+  margin-bottom: 20px;
+}
+
+.message-content {
+  color: black;
+}
+
+.message-date {
+  font-size: .9rem;
+  color: rgb(98, 98, 98);
+  margin-top: 5px;
+}
